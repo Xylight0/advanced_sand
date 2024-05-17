@@ -88,8 +88,14 @@ function Refresh() {
 }
 
 function PlayMusic() {
-  sound.stop();
-  sound.loop();
+  const elem = document.getElementById("playSound");
+  if (sound.isPlaying()) {
+    elem.innerText = "Play Music"
+    sound.stop();
+  } else {
+    elem.innerText = "Stop Music"
+    sound.loop();
+  }
 }
 
 const toggler = document.querySelector(".menu__toggler");
