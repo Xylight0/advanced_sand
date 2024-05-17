@@ -1,0 +1,105 @@
+html,
+body {
+	margin : 0;
+	padding: 0;
+}
+
+canvas {
+	display: block;
+}
+
+.menu__toggler {
+	position   : absolute;
+	top        : 20px;
+	left       : 20px;
+	z-index    : 999;
+	height     : 28px;
+	width      : 28px;
+	outline    : none;
+	cursor     : pointer;
+	display    : flex;
+	align-items: center;
+}
+
+.menu__toggler span,
+.menu__toggler span::before,
+.menu__toggler span::after {
+	position     : absolute;
+	content      : "";
+	width        : 28px;
+	height       : 2.5px;
+	background   : #fafafa;
+	border-radius: 20px;
+	transition   : 500ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.menu__toggler span::before {
+	top: -8px;
+}
+
+.menu__toggler span::after {
+	top: 8px;
+}
+
+.menu__toggler.active>span {
+	background: transparent;
+}
+
+.menu__toggler.active>span::before,
+.menu__toggler.active>span::after {
+	background: #fff;
+	top       : 0px;
+}
+
+.menu__toggler.active>span::before {
+	transform: rotate(-225deg);
+}
+
+.menu__toggler.active>span::after {
+	transform: rotate(225deg);
+}
+
+.menu {
+	position      : absolute;
+	left          : -400px;
+	color         : #fff;
+	background    : rgba(81, 90, 145, 0.7);
+	clip-path     : polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+	width         : 400px;
+	height        : 100%;
+	padding       : 100px;
+	display       : flex;
+	flex-direction: column;
+	gap           : 20px;
+	transition    : 300ms left cubic-bezier(0.77, 0, 0.175, 1);
+	font-family   : system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+	.menu {
+		width  : 250px;
+		left   : -250px;
+		padding: 50px;
+	}
+}
+
+.menu.active {
+	left: 0;
+}
+
+.menu p {
+	cursor       : pointer;
+	font-size    : 1.6rem;
+	margin-bottom: 1rem;
+}
+
+.menu p:hover {
+	text-decoration: underline;
+}
+
+*,
+*::before,
+*::after {
+	margin : 0;
+	padding: 0;
+	box-sizing: border-box;
