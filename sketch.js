@@ -9,8 +9,7 @@ let fadeIn = false;
 let canvasImg;
 
 let sound;
-let soundURL =
-  "https://raw.githubusercontent.com/jomo0825/jomo0825.github.io/master/sound/great_compassion.mp3";
+let soundURL = "./music.mp3";
 
 function preload() {
   sound = loadSound(soundURL);
