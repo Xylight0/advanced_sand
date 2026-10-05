@@ -43,7 +43,7 @@ Make sure `music.mp3` is present in the project directory if you want to use the
 
 ## Demo
 
-[Live Demo]([https://your-username.github.io/your-repository/](https://xylight0.github.io/advanced_sand/))
+[Live Demo](https://xylight0.github.io/advanced_sand/)
 
 ---
 
